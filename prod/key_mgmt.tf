@@ -4,7 +4,7 @@
 
 resource "aws_kms_key" "web_a_ebs_key" {
   
-  description             = "web_a EBS volume encryption key"
+  description             = "web_a EBS volume encryption key" #key filename used for the purposes of our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
@@ -17,7 +17,7 @@ resource "aws_kms_alias" "web_a_ebs_key" {
 }
 
 resource "aws_kms_key" "web_b_ebs_key" {
-  description             = "web_b EBS volume encryption key"
+  description             = "web_b EBS volume encryption key" #key filename used for the purposes of our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
@@ -34,7 +34,7 @@ resource "aws_kms_alias" "web_b_ebs_key" {
 ###################
 
 resource "aws_kms_key" "db_a_key" {
-  description             = "db_a encryption key"
+  description             = "db_a encryption key" #key filename used for the purposes of our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
@@ -47,7 +47,7 @@ resource "aws_kms_alias" "db_a_key" {
 }
 
 resource "aws_kms_key" "db_a_pw_key" {
-  description             = "db_a secrets manager encryption key"
+  description             = "db_a secrets manager encryption key" #key filename used for the purposes of our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
@@ -60,7 +60,7 @@ resource "aws_kms_alias" "db_a_pw_key" {
 }
 
 resource "aws_kms_key" "db_b_key" {
-  description             = "db_a encryption key"
+  description             = "db_a encryption key" #key filename used for our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
@@ -73,7 +73,7 @@ resource "aws_kms_alias" "db_b_key" {
 }
 
 resource "aws_kms_key" "db_b_pw_key" {
-  description             = "db_a secrets manager encryption key"
+  description             = "db_a secrets manager encryption key" #key filename used for the purposes of our project
   key_usage               = "ENCRYPT_DECRYPT"
   deletion_window_in_days = 10
 
